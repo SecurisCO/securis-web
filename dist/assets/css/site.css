@@ -267,7 +267,7 @@ img, svg { display: block; }
 .cap p { color: var(--mute-l); max-width: 34em; }
 .cap .out { display: flex; flex-direction: column; gap: 8px; }
 .cap .out .label { color: var(--mute-l); }
-.cap .out span:last-child { font-size: 16px; }
+.cap .out span:not(.label) { font-size: 16px; }
 
 /* ---------- Dark sections ---------- */
 .dark { background: var(--ink); color: var(--text-d); border-top: 1px solid var(--rule-d2); }
@@ -337,25 +337,6 @@ img, svg { display: block; }
 .notice p { font-size: clamp(17px, 1.5vw, 21px); line-height: 1.5; max-width: 38em; }
 .notice p + p { margin-top: 16px; color: var(--mute-d); font-size: 15px; }
 
-/* gateway */
-.gateway .wrap { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 9fr); gap: clamp(24px, 4vw, 64px); }
-.gateway .label { color: var(--mute-d); padding-top: 14px; }
-.gate {
-  display: inline-block;
-  font-size: clamp(32px, 6vw, 92px);
-  font-weight: 500; font-stretch: 78%;
-  letter-spacing: -0.025em; line-height: 1;
-  text-decoration: none;
-  border-bottom: 1px solid var(--rule-d);
-  padding-bottom: 12px;
-  margin-top: 28px;
-  transition: border-color .25s;
-  word-break: break-word;
-}
-.gate:hover { border-color: var(--text-d); }
-.gate .arr { font-family: var(--sans); font-weight: 400; }
-.gateway p { color: var(--mute-d); max-width: 36em; margin-top: 24px; }
-
 /* footer */
 .foot { background: var(--ink); border-top: 1px solid var(--rule-d2); color: var(--mute-d); }
 .foot .wrap {
@@ -409,11 +390,6 @@ img, svg { display: block; }
 .nf .code { font-family: var(--mono); color: var(--mute-d); }
 .nf h1 { font-size: clamp(48px, 8vw, 120px); font-weight: 500; font-stretch: 78%; letter-spacing: -0.03em; line-height: .95; margin: 20px 0 32px; }
 
-/* ---------- Reveal ---------- */
-.rv { opacity: 0; transform: translateY(14px); transition: opacity .8s ease, transform .8s cubic-bezier(.2, .7, .2, 1); }
-.rv.in { opacity: 1; transform: none; }
-.no-js .rv { opacity: 1; transform: none; }
-
 /* ---------- Responsive ---------- */
 @media (max-width: 1080px) {
   .nav { gap: 22px; }
@@ -444,8 +420,8 @@ img, svg { display: block; }
   .hero-copy { padding-bottom: 8px; }
   .plan-foot span:last-child { display: none; }
 
-  .sec-head, .method-note, .notice, .gateway .wrap { grid-template-columns: 1fr; gap: 20px; }
-  .sec-head .label, .gateway .label { padding-top: 0; }
+  .sec-head, .method-note, .notice { grid-template-columns: 1fr; gap: 20px; }
+  .sec-head .label { padding-top: 0; }
   .principles { grid-template-columns: 1fr; margin-left: 0; }
   .principles li { padding: 24px; }
   .cap, .norm { grid-template-columns: 1fr; gap: 12px; }
@@ -472,9 +448,112 @@ img, svg { display: block; }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
-  .rv { opacity: 1; transform: none; }
 }
 .sprite{position:absolute;width:0;height:0;overflow:hidden}
 .notice p.label { font-size: 11.5px; line-height: 1.4; margin: 0; color: var(--mute-d); }
 .light + .light { border-top: 1px solid var(--rule-l); }
 .doc a { text-underline-offset: 3px; }
+
+/* ================= Capa premium ================= */
+:root { --risk-d: #6FA3E0; --risk-l: #2B5C9E; }
+html { color-scheme: dark; scrollbar-color: #3A3E44 var(--ink); scroll-padding-top: 84px; }
+:focus-visible { outline-width: 2px; outline-offset: 3px; }
+
+/* tipografía */
+h1, h2, h3 { text-wrap: balance; }
+p, li { text-wrap: pretty; }
+.label .no { margin-right: 1.1em; color: var(--text-d); }
+.light .label .no { color: var(--text-l); }
+
+/* marca Securis Risk */
+.rk { color: var(--risk-d); font-weight: 600; }
+.rk-s { font-weight: 500; }
+.nav .nav-cta {
+  display: inline-flex; align-items: center; gap: .4em; color: var(--text-d);
+  border-color: color-mix(in srgb, var(--risk-d) 42%, var(--rule-d));
+  background: color-mix(in srgb, var(--risk-d) 9%, transparent);
+}
+.nav .nav-cta:hover { border-color: var(--risk-d); background: color-mix(in srgb, var(--risk-d) 17%, transparent); }
+.nav .nav-cta .arr { color: var(--risk-d); transition: transform .2s; }
+.nav .nav-cta:hover .arr { transform: translate(2px, -2px); }
+.btn-solid .rk { color: var(--risk-l); }
+.btn-solid:hover .rk { color: var(--risk-d); }
+.btn:active { transform: translateY(1px); }
+.foot-col a.rk-link { color: var(--text-d); }
+.more {
+  align-self: flex-start; margin-top: 6px; padding-bottom: 3px;
+  font-family: var(--mono); font-size: 11.5px; font-weight: 500; letter-spacing: .12em; text-transform: uppercase;
+  text-decoration: none; color: var(--risk-l);
+  border-bottom: 1px solid color-mix(in srgb, var(--risk-l) 38%, transparent);
+  transition: border-color .2s;
+}
+.more:hover { border-color: var(--risk-l); }
+.more-d { color: var(--risk-d); border-color: color-mix(in srgb, var(--risk-d) 38%, transparent); }
+.more-d:hover { border-color: var(--risk-d); }
+.method-note > div { display: flex; flex-direction: column; gap: 18px; }
+
+/* hero: la retícula del plano se extiende a toda la sección */
+.hero::before {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background-image:
+    linear-gradient(var(--rule-d2) 1px, transparent 1px),
+    linear-gradient(90deg, var(--rule-d2) 1px, transparent 1px);
+  background-size: 64px 64px; background-position: -1px -1px;
+  mask-image: radial-gradient(75% 90% at 72% 45%, #000 15%, transparent 78%);
+}
+.hero .wrap { position: relative; }
+
+/* plano interactivo: valoración P x C y énfasis al pasar el cursor */
+.plan .tag-p { font-family: var(--mono); font-size: 9px; letter-spacing: .08em; fill: #B9BDC3; }
+.plan .mk-ring { pointer-events: all; }
+.plan .mk { transition: opacity .25s; cursor: default; }
+.plan .tag-box { transition: stroke .2s; }
+.plan .mk:hover .tag-box { stroke: var(--text-d); }
+.hero-plan:has(.mk:hover) .mk:not(:hover) { opacity: .32; }
+.hero-plan:hover .scanner { animation-play-state: paused; }
+
+/* tarjetas de soluciones: línea de acento al pasar el cursor */
+.cap { position: relative; }
+.cap::after {
+  content: ""; position: absolute; bottom: -1px; height: 2px; border-radius: 2px;
+  left: clamp(22px, 3vw, 36px); right: clamp(22px, 3vw, 36px);
+  background: var(--risk-l); transform: scaleX(0); transform-origin: left;
+  transition: transform .5s cubic-bezier(.2, .7, .2, 1);
+}
+@media (hover: hover) { .cap:hover::after { transform: scaleX(1); } }
+
+/* cabecera: se compacta al desplazarse */
+.top { view-transition-name: site-header; }
+@media (max-width: 860px) { .top.open .nav { top: 100%; } }
+@media (prefers-reduced-motion: no-preference) {
+  @supports ((animation-timeline: scroll()) and (animation-range: 0% 100%)) {
+    @keyframes top-shrink { to { height: 54px; } }
+    @keyframes top-solid { to { background: rgba(11, 12, 14, 0.96); border-bottom-color: var(--rule-d); } }
+    .top .wrap { animation: top-shrink auto linear both; animation-timeline: scroll(root block); animation-range: 0px 120px; }
+    .top { animation: top-solid auto linear both; animation-timeline: scroll(root block); animation-range: 0px 120px; }
+  }
+}
+
+/* revelado al entrar en pantalla: nativo con scroll-driven animations, IntersectionObserver como respaldo */
+@media (prefers-reduced-motion: no-preference) {
+  @supports ((animation-timeline: view()) and (animation-range: entry)) {
+    @keyframes rv-in { from { opacity: 0; transform: translateY(28px); } }
+    .rv { animation: rv-in auto linear both; animation-timeline: view(); animation-range: entry 0% entry 38%; }
+  }
+  @supports not ((animation-timeline: view()) and (animation-range: entry)) {
+    .rv-io .rv { opacity: 0; transform: translateY(14px); transition: opacity .8s ease, transform .8s cubic-bezier(.2, .7, .2, 1); }
+    .rv-io .rv.in { opacity: 1; transform: none; }
+  }
+}
+
+/* transiciones entre páginas (inicio, aviso legal, 404) */
+@view-transition { navigation: auto; }
+@media (prefers-reduced-motion: reduce) { @view-transition { navigation: none; } }
+@keyframes vt-out { to { opacity: 0; } }
+@keyframes vt-in { from { opacity: 0; transform: translateY(10px); } }
+::view-transition-old(root) { animation: .2s ease-in both vt-out; }
+::view-transition-new(root) { animation: .4s cubic-bezier(.2, .7, .2, 1) both vt-in; }
+::view-transition-old(site-header) { display: none; }
+::view-transition-new(site-header) { animation: none; }
+
+.hero h1 .dim { display: block; }
