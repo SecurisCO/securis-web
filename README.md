@@ -1,7 +1,8 @@
 # Securis — sitio web
 
-Sitio comercial de [Securis](https://securis.com.co): estudios de seguridad y
-análisis de riesgos en instalaciones, con el proceso de la norma ISO 31000.
+Sitio principal de [Securis](https://securis.com.co): análisis inteligente de
+riesgos con el proceso de la norma ISO 31000 y acceso a la plataforma
+[Riesgos Inteligentes](https://risk.securis.com.co).
 
 ## Contenido
 
@@ -9,12 +10,14 @@ análisis de riesgos en instalaciones, con el proceso de la norma ISO 31000.
 - `dist/_headers`: cabeceras de seguridad (CSP estricta, HSTS, etc.).
 - `dist/.well-known/security.txt`: contacto para reportar vulnerabilidades.
 
-## Seguridad
+## Reporte de vulnerabilidades
 
-Para reportar una vulnerabilidad escriba a legal@securis.com.co.
+Escriba a legal@securis.com.co.
 Este repositorio no debe contener secretos, llaves ni datos de clientes.
 
 ## Derechos
 
-Todos los derechos reservados. Consulte `LICENSE`. La marca, el logotipo y los
-textos de Securis no pueden reutilizarse sin autorización escrita.
+Todos los derechos reservados. Consulte `LICENSE`. El repositorio es visible
+únicamente para consulta: la marca, el logotipo, los textos, el diseño y el
+código de Securis no pueden copiarse, modificarse ni reutilizarse sin
+autorización escrita.

@@ -1,3 +1,4 @@
+/* © 2026 Securis. Todos los derechos reservados. Código visible solo para consulta; sin licencia de copia, modificación ni reutilización. */
 (function () {
   var root = document.documentElement;
   root.classList.remove('no-js');
