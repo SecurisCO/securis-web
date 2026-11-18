@@ -20,18 +20,23 @@
     });
   }
 
-  var y = document.querySelectorAll('[data-year]');
-  y.forEach(function (el) { el.textContent = new Date().getFullYear(); });
+  document.querySelectorAll('[data-year]').forEach(function (el) {
+    el.textContent = new Date().getFullYear();
+  });
 
-  var items = document.querySelectorAll('.rv');
-  if (!('IntersectionObserver' in window)) {
-    items.forEach(function (el) { el.classList.add('in'); });
-    return;
-  }
+  /* Revelado al entrar en pantalla.
+     Los navegadores con scroll-driven animations lo resuelven solo con CSS;
+     el resto usa IntersectionObserver, y solo si el usuario admite movimiento. */
+  var nativo = window.CSS && CSS.supports &&
+    CSS.supports('(animation-timeline: view()) and (animation-range: entry)');
+  var movimiento = window.matchMedia('(prefers-reduced-motion: no-preference)').matches;
+  if (nativo || !movimiento || !('IntersectionObserver' in window)) return;
+
+  root.classList.add('rv-io');
   var io = new IntersectionObserver(function (entries) {
     entries.forEach(function (e) {
       if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
     });
   }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
-  items.forEach(function (el) { io.observe(el); });
+  document.querySelectorAll('.rv').forEach(function (el) { io.observe(el); });
 })();

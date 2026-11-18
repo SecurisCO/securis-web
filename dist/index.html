@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Securis</title>
-<meta name="description" content="Securis: análisis inteligente de riesgos con el proceso de ISO 31000, IEC 31010 e ISO 31073. Datos con fuente, método a la vista y acceso a la plataforma Riesgos Inteligentes.">
+<meta name="description" content="Securis: análisis inteligente de riesgos con el proceso de ISO 31000, IEC 31010 e ISO 31073. Datos con fuente, método a la vista y acceso a la plataforma Securis Risk.">
 <meta name="application-name" content="Securis">
 <meta name="theme-color" content="#0B0C0E">
 <link rel="canonical" href="https://securis.com.co/">
@@ -12,6 +12,7 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preload" href="/assets/fonts/instrument-sans.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/css/site.css">
+<link rel="expect" href="#inicio" blocking="render">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="es_CO">
 <meta property="og:site_name" content="Securis">
@@ -38,7 +39,7 @@
       <a href="/#soluciones">Soluciones</a>
       <a href="/#metodo">Método</a>
       <a href="/#normas">Normas</a>
-      <a class="nav-cta" href="https://risk.securis.com.co">Riesgos Inteligentes <span class="arr" aria-hidden="true">↗</span></a>
+      <a class="nav-cta" href="https://risk.securis.com.co"><span class="rk-s">Securis</span> <span class="rk">Risk</span> <span class="arr" aria-hidden="true">↗</span></a>
     </nav>
     <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav">Menú</button>
   </div>
@@ -46,7 +47,7 @@
 
 <main id="contenido">
 
-<section class="hero" aria-labelledby="h-hero">
+<section class="hero" id="inicio" aria-labelledby="h-hero">
   <div class="wrap">
     <div class="hero-copy">
       <div>
@@ -54,7 +55,7 @@
         <h1 id="h-hero">El riesgo se decide mejor cuando se mide. <span class="dim">Con método y fuente a la vista.</span></h1>
         <p class="lede">Convertimos datos verificables en una lectura clara del riesgo de territorios, operaciones y corredores, con el proceso de la norma ISO 31000 para decidir con criterio y en el orden correcto.</p>
         <div class="actions">
-          <a class="btn btn-solid" href="https://risk.securis.com.co">Ir a Riesgos Inteligentes <span class="arr" aria-hidden="true">→</span></a>
+          <a class="btn btn-solid" href="https://risk.securis.com.co">Ir a Securis <span class="rk">Risk</span> <span class="arr" aria-hidden="true">→</span></a>
           <a class="btn btn-line" href="#metodo">Ver el método</a>
         </div>
       </div>
@@ -64,7 +65,7 @@
       <div class="plan-head label"><span>Lectura de referencia · Instalación tipo</span><span>Ilustrativo</span></div>
       <svg class="plan" viewBox="0 0 760 600" role="img" aria-labelledby="plan-t plan-d">
         <title id="plan-t">Plano de escenarios de riesgo</title>
-        <desc id="plan-d">Planta ilustrativa de una instalación con edificio principal, parqueadero, muelle de carga y cuatro escenarios de riesgo: acceso logístico y suministro eléctrico en nivel alto; patio de almacenamiento y muelle de carga en nivel medio.</desc>
+        <desc id="plan-d">Planta ilustrativa de una instalación con edificio principal, parqueadero, muelle de carga y cuatro escenarios de riesgo valorados en una matriz de probabilidad por consecuencia: acceso logístico (4 por 4) y suministro eléctrico (3 por 5) en nivel alto; patio de almacenamiento (3 por 3) y muelle de carga (2 por 4) en nivel medio.</desc>
         <defs>
           <pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
             <line x1="0" y1="0" x2="0" y2="8" stroke="#2C3036" stroke-width="2"/>
@@ -99,33 +100,37 @@
           <line class="lead" x1="207" y1="498" x2="236" y2="478"/>
           <circle class="mk-ring" cx="200" cy="504" r="11"/>
           <circle class="mk-core" cx="200" cy="504" r="5"/>
-          <rect class="tag-box" x="236" y="452" width="176" height="40" rx="6"/>
+          <rect class="tag-box" x="236" y="452" width="176" height="52" rx="6"/>
           <text class="tag-t" x="246" y="468">R-01 · ALTO</text>
           <text class="tag-s" x="246" y="483">ACCESO LOGÍSTICO</text>
+          <text class="tag-p" x="246" y="497">P4 × C4 = 16</text>
         </g>
         <g class="mk">
           <line class="lead" x1="684" y1="86" x2="664" y2="72"/>
           <circle class="mk-ring" cx="690" cy="92" r="11"/>
           <circle class="mk-core" cx="690" cy="92" r="5"/>
-          <rect class="tag-box" x="488" y="54" width="176" height="40" rx="6"/>
+          <rect class="tag-box" x="488" y="54" width="176" height="52" rx="6"/>
           <text class="tag-t" x="498" y="70">R-02 · ALTO</text>
           <text class="tag-s" x="498" y="85">SUMINISTRO ELÉCTRICO</text>
+          <text class="tag-p" x="498" y="99">P3 × C5 = 15</text>
         </g>
         <g class="mk">
           <line class="lead" x1="112" y1="208" x2="112" y2="222"/>
           <circle class="mk-ring" cx="112" cy="200" r="11"/>
           <circle class="mk-core med" cx="112" cy="200" r="4.5"/>
-          <rect class="tag-box" x="66" y="222" width="176" height="40" rx="6"/>
+          <rect class="tag-box" x="66" y="222" width="176" height="52" rx="6"/>
           <text class="tag-t" x="76" y="238">R-03 · MEDIO</text>
           <text class="tag-s" x="76" y="253">PATIO · ALMACENAMIENTO</text>
+          <text class="tag-p" x="76" y="267">P3 × C3 = 9</text>
         </g>
         <g class="mk">
           <line class="lead" x1="478" y1="436" x2="496" y2="446"/>
           <circle class="mk-ring" cx="472" cy="430" r="11"/>
           <circle class="mk-core med" cx="472" cy="430" r="4.5"/>
-          <rect class="tag-box" x="496" y="430" width="168" height="40" rx="6"/>
+          <rect class="tag-box" x="496" y="430" width="168" height="52" rx="6"/>
           <text class="tag-t" x="506" y="446">R-04 · MEDIO</text>
           <text class="tag-s" x="506" y="461">MUELLE · CARGA</text>
+          <text class="tag-p" x="506" y="475">P2 × C4 = 8</text>
         </g>
 
         <g>
@@ -137,7 +142,7 @@
           <text class="txt" x="680" y="556">20 M</text>
         </g>
       </svg>
-      <div class="plan-foot label"><span>4 escenarios · 2 altos · 2 medios</span><span>Esc. 1:500</span></div>
+      <div class="plan-foot label"><span>4 escenarios · 2 altos · 2 medios · matriz 5×5</span><span>Esc. 1:500</span></div>
     </figure>
   </div>
 </section>
@@ -153,7 +158,7 @@
 <section class="light sec" id="enfoque" aria-labelledby="h-enfoque">
   <div class="wrap">
     <div class="sec-head rv">
-      <p class="label">Enfoque</p>
+      <p class="label"><span class="no">01</span>Enfoque</p>
       <h2 class="h2" id="h-enfoque">El riesgo se decide con información. <span class="dim">Medimos la exposición real y la convertimos en prioridades claras.</span></h2>
     </div>
     <ul class="principles rv">
@@ -176,29 +181,29 @@
 <section class="light sec" id="soluciones" aria-labelledby="h-sol">
   <div class="wrap">
     <div class="sec-head rv">
-      <p class="label">Soluciones</p>
+      <p class="label"><span class="no">02</span>Soluciones</p>
       <h2 class="h2" id="h-sol">Cuatro líneas de inteligencia, <span class="dim">una misma plataforma.</span></h2>
     </div>
     <div class="caps">
       <article class="cap rv">
         <h3>Inteligencia territorial</h3>
         <p>Lectura del riesgo por municipio: tendencias y comparación entre territorios, con el método y la fuente de cada cifra a la vista.</p>
-        <div class="out"><span class="label">Incluye</span><span>Mapa gratuito y fichas municipales.</span></div>
+        <div class="out"><span class="label">Incluye</span><span>Mapa gratuito y fichas municipales.</span><a class="more" href="https://risk.securis.com.co/mapa" aria-label="Ver el mapa de inteligencia territorial en Securis Risk">Ver el mapa <span aria-hidden="true">↗</span></a></div>
       </article>
       <article class="cap rv">
         <h3>Inteligencia operacional</h3>
         <p>Análisis del riesgo de una instalación u operación frente a su entorno, con comparación frente a pares del mismo sector.</p>
-        <div class="out"><span class="label">Incluye</span><span>Informe, matriz de riesgos 5×5 y registro de riesgos.</span></div>
+        <div class="out"><span class="label">Incluye</span><span>Informe, matriz de riesgos 5×5 y registro de riesgos.</span><a class="more" href="https://risk.securis.com.co/soluciones" aria-label="Ver inteligencia operacional en Securis Risk">Ver solución <span aria-hidden="true">↗</span></a></div>
       </article>
       <article class="cap rv">
         <h3>Inteligencia vial</h3>
         <p>Riesgo por corredor, incluidas las afectaciones de puentes y vías que condicionan la continuidad de una operación.</p>
-        <div class="out"><span class="label">Incluye</span><span>Riesgo por corredor vial.</span></div>
+        <div class="out"><span class="label">Incluye</span><span>Riesgo por corredor vial.</span><a class="more" href="https://risk.securis.com.co/soluciones" aria-label="Ver inteligencia vial en Securis Risk">Ver solución <span aria-hidden="true">↗</span></a></div>
       </article>
       <article class="cap rv">
         <h3>Inteligencia empresarial</h3>
         <p>El riesgo integrado a los sistemas y rutinas de la organización: monitoreo de portafolio, alertas y acceso programático.</p>
-        <div class="out"><span class="label">Incluye</span><span>API, alertas, monitoreo de portafolio y datos abiertos.</span></div>
+        <div class="out"><span class="label">Incluye</span><span>API, alertas, monitoreo de portafolio y datos abiertos.</span><a class="more" href="https://risk.securis.com.co/soluciones" aria-label="Ver inteligencia empresarial en Securis Risk">Ver solución <span aria-hidden="true">↗</span></a></div>
       </article>
     </div>
   </div>
@@ -207,7 +212,7 @@
 <section class="dark sec method" id="metodo" aria-labelledby="h-metodo">
   <div class="wrap">
     <div class="sec-head rv">
-      <p class="label">Método</p>
+      <p class="label"><span class="no">03</span>Método</p>
       <h2 class="h2" id="h-metodo">El proceso de ISO 31000:2018, <span class="dim">aplicado a cada análisis.</span></h2>
     </div>
 
@@ -246,7 +251,10 @@
 
     <div class="method-note rv">
       <p class="label">Nota</p>
-      <p>ISO 31000 es una norma de directrices: orienta el proceso y no se certifica. La usamos como estructura para que cada análisis sea comparable, auditable y fácil de actualizar cuando cambian los datos o el contexto.</p>
+      <div>
+        <p>ISO 31000 es una norma de directrices: orienta el proceso y no se certifica. La usamos como estructura para que cada análisis sea comparable, auditable y fácil de actualizar cuando cambian los datos o el contexto.</p>
+        <a class="more more-d" href="https://risk.securis.com.co/metodologia">Ver la metodología completa en Securis Risk <span aria-hidden="true">↗</span></a>
+      </div>
     </div>
   </div>
 </section>
@@ -254,7 +262,7 @@
 <section class="light sec" id="normas" aria-labelledby="h-normas">
   <div class="wrap">
     <div class="sec-head rv">
-      <p class="label">Marco de referencia</p>
+      <p class="label"><span class="no">04</span>Marco de referencia</p>
       <h2 class="h2" id="h-normas">Método con norma, <span class="dim">no con intuición.</span></h2>
     </div>
     <div class="norms">
@@ -290,17 +298,6 @@
   </div>
 </section>
 
-<section class="dark sec gateway" id="plataforma" aria-labelledby="h-plat">
-  <div class="wrap rv">
-    <p class="label">Plataforma</p>
-    <div>
-      <h2 class="h2" id="h-plat">Todo el análisis, en Riesgos Inteligentes.</h2>
-      <a class="gate" href="https://risk.securis.com.co">risk.securis.com.co <span class="arr" aria-hidden="true">↗</span></a>
-      <p>Mapa, fichas, informes y acceso programático en un solo lugar. Para planes empresariales y propuestas, escriba a <a href="mailto:comercial@securis.com.co">comercial@securis.com.co</a>. Los datos que nos envíe se tratarán según nuestra <a href="/legal#datos">política de tratamiento de datos</a>.</p>
-    </div>
-  </div>
-</section>
-
 </main>
 
 <footer class="foot">
@@ -321,7 +318,7 @@
     </nav>
     <nav class="foot-col" aria-labelledby="f-plat">
       <h2 class="label" id="f-plat">Plataforma</h2>
-      <a href="https://risk.securis.com.co">Riesgos Inteligentes <span aria-hidden="true">↗</span></a>
+      <a class="rk-link" href="https://risk.securis.com.co"><span class="rk-s">Securis</span> <span class="rk">Risk</span> <span aria-hidden="true">↗</span></a>
     </nav>
     <nav class="foot-col" aria-labelledby="f-legal">
       <h2 class="label" id="f-legal">Legal</h2>
