@@ -35,6 +35,18 @@
     });
   }
 
+  /* Contacto: el correo se arma solo al hacer clic, para que no quede
+     escrito en el HTML ni lo recojan los robots que buscan direcciones. */
+  document.querySelectorAll('[data-contacto]').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      e.preventDefault();
+      var u = ['l', 'a', 'i', 'c', 'r', 'e', 'm', 'o', 'c'].reverse().join('');
+      var d = ['co', 'com', 'securis'].reverse().join('.');
+      var asunto = encodeURIComponent('Contacto desde securis.com.co');
+      window.location.href = 'mai' + 'lto:' + u + String.fromCharCode(64) + d + '?subject=' + asunto;
+    });
+  });
+
   /* Revelado al entrar en pantalla.
      Los navegadores con scroll-driven animations lo resuelven solo con CSS;
      el resto usa IntersectionObserver, y solo si el usuario admite movimiento. */
