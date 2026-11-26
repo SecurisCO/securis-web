@@ -24,6 +24,17 @@
     el.textContent = new Date().getFullYear();
   });
 
+  /* Foco de luz que sigue al cursor dentro de cada tarjeta. */
+  if (window.matchMedia('(hover: hover) and (prefers-reduced-motion: no-preference)').matches) {
+    document.querySelectorAll('.card').forEach(function (c) {
+      c.addEventListener('pointermove', function (e) {
+        var r = c.getBoundingClientRect();
+        c.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+        c.style.setProperty('--my', (e.clientY - r.top) + 'px');
+      });
+    });
+  }
+
   /* Revelado al entrar en pantalla.
      Los navegadores con scroll-driven animations lo resuelven solo con CSS;
      el resto usa IntersectionObserver, y solo si el usuario admite movimiento. */
