@@ -590,13 +590,12 @@ body { font-size-adjust: from-font; letter-spacing: -0.003em; }
 /* soluciones */
 .cap {
   grid-template-columns: minmax(0, 4fr) minmax(0, 5fr) minmax(0, 4fr);
-  grid-template-areas: "id desc spec" "id desc more";
+  grid-template-areas: "id desc spec";
   row-gap: 18px; align-items: start;
 }
 .cap-id { grid-area: id; display: flex; flex-direction: column; gap: 14px; }
 .cap-desc { grid-area: desc; }
 .cap .spec { grid-area: spec; margin: 0; }
-.cap .more { grid-area: more; margin-top: 0; }
 .spec { display: grid; border-top: 1px solid var(--rule-l); }
 .spec > div { display: grid; grid-template-columns: 7.5em 1fr; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--rule-l); }
 .spec dt { font-family: var(--mono); font-size: 10.5px; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: var(--mute-l); padding-top: 3px; }
@@ -661,7 +660,7 @@ body { font-size-adjust: from-font; letter-spacing: -0.003em; }
 }
 
 @media (max-width: 860px) {
-  .cap { grid-template-columns: 1fr; grid-template-areas: "id" "desc" "spec" "more"; row-gap: 14px; }
+  .cap { grid-template-columns: 1fr; grid-template-areas: "id" "desc" "spec"; row-gap: 14px; }
   .principles h3 { margin-top: 32px; }
   .tag { white-space: normal; }
 }
