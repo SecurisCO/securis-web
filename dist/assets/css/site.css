@@ -617,8 +617,8 @@ body { font-size-adjust: from-font; letter-spacing: -0.003em; }
 
 .cy { color: var(--cy-d); font-weight: 600; }
 .foot-col a.cy-link { color: var(--text-d); }
-.foot-col a.ico-x { color: var(--text-d); }
-.foot-col a.ico-x:hover { background: var(--text-d); border-color: var(--text-d); color: var(--ink); }
+.foot-col a.ico-btn { color: var(--text-d); }
+.foot-col a.ico-btn:hover { background: var(--text-d); border-color: var(--text-d); color: var(--ink); }
 .ico-x svg { width: 1.2rem; height: 1.2rem; }
 
 /* barra de progreso de lectura (decorativa: solo con soporte nativo) */
